@@ -1,0 +1,7 @@
+model{
+    Library library
+}
+json{
+    name library.name
+    books g.render(template: '/book/book', collection: library.books.findAll{ Book book -> book.area == 'ES' }, var: 'book')
+}

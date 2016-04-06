@@ -1,0 +1,7 @@
+model{
+    Book book
+}
+json{
+    bookTitle book.title
+    libraryUrl g.link(controller: 'library', action: 'show', id: book.library.id)
+}
